@@ -1,12 +1,10 @@
 language: node_js
 node_js:
   - "11.6.0"
-cache: npm
 branches:
   only:
     - master
 before_script:
   - npm install -g @angular/cli
-  - npm ci
 script:
   - ng serve

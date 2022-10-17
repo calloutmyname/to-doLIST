@@ -2,10 +2,6 @@ arch: ppc64le
 os: linux
 dist: xenial
 install:
-apt:
-  packages:
-  - cmake
-  - vi
 - echo "install stage"
 script:
 - echo "hello"

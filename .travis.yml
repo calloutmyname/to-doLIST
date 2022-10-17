@@ -1,20 +1,11 @@
 arch: ppc64le
-install:
-- echo "install stage"
-script:
-- echo "hello"
-- docker run -d alpine
- - docker ps -a
-before_install:
-- echo "before install phase"
-- docker pull alpine
-before_script:
-- echo "before script phase"
-after_script:
-- echo "after script phase"
-after_success:
-- echo "script ran successfully!"
-after_failure:
-- echo "script failed!"
+
 services:
   - docker
+
+before_install:
+  - docker pull alpine
+
+script:
+  - docker run -d alpine
+  - docker ps -a
